@@ -13,5 +13,6 @@ void insert(short x, PointerNode* node);
 void binaryGenerator(int numBits,PointerNode* node);
 void print(int numBits,PointerNode root);
 void printResult(int level,int* binaryNumber, int numBits, PointerNode node);
+void verilogTable(int numBits, int* binaryNumber);
 
 #endif

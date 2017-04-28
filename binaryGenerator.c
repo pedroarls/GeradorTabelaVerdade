@@ -47,6 +47,7 @@ void print(int numBits,PointerNode root){
 
 void printResult(int level,int* binaryNumber,int numBits,PointerNode node){
 	int i;
+	char string[numBits];
 	if(node==NULL){
 		return;
 	}
@@ -56,9 +57,28 @@ void printResult(int level,int* binaryNumber,int numBits,PointerNode node){
 	}
 
 	if(level==numBits){
-		for(i=0;i<numBits;i++){
+		/*for(i=0;i<numBits;i++){
 			printf("%d",binaryNumber[i]);
+		}*/
+		if(numBits>0 && numBits<=3){
+			/*for(i=0;i<numBits;i++){
+				string[i]=binaryNumber[i] + 0x30; //convert from integer to string
+			}*/
+			string[numBits]='\0';
+			
+			for(i=0; i<numBits;i++){
+				printf("pi%d=%d\'b%d",i,numBits,binaryNumber[i]);
+			}
+			printf("\n");
 		}
+		else if(numBits>3 && numBits<=6){
+			/*for(i=0;i<numBits;i++){
+				string[i]=binaryNumber[i] + 0x30; //convert from integer to string
+			}
+			string[numBits]='\0';*/
+			printf("pi0%d=%d\'b%d",i,numBits,binaryNumber[i]);
+		}
+		
 		printf("\n");
 		
 	}
@@ -66,3 +86,5 @@ void printResult(int level,int* binaryNumber,int numBits,PointerNode node){
 	printResult(level+1,binaryNumber,numBits,node->left);
 	printResult(level+1,binaryNumber,numBits,node->right);
 }
+
+
