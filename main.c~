@@ -4,7 +4,7 @@
 
 int main(){
 	PointerNode root;
-	int numBits = 5;
+	int numBits = 4;
 	createTree(&root);
 	binaryGenerator(numBits,&root);
 	print(numBits,root);

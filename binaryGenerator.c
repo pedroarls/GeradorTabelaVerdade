@@ -57,6 +57,7 @@ void printResult(int level,int* binaryNumber,int numBits,PointerNode node){
 	}
 
 	if(level==numBits){
+		printf("#1 ");
 		for(i=0;i<numBits;i++){
 			printf("pi%d=%d; ",i,binaryNumber[i]);
 		}
